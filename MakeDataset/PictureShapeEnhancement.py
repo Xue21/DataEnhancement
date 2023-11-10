@@ -31,7 +31,7 @@ def jpg_png(img_path,output_path):
         im_name_new = im_name.split('.')[0] + '.png'
         cv2.imwrite(output_path + im_name_new, img)
 
-def augment_data():
+def augment_data(Augmentation_1 = 2140):
     """图像增强
     图片名字及后缀与掩码名字及后缀必须相同，否者不能进行数据增强
     """
@@ -44,7 +44,7 @@ def augment_data():
     """当原图是三通道，标签是单通道时没法进行颜色方面的改变"""
     #p.random_brightness(probability=0.5,min_factor=0.6,max_factor=0.8)
     #p.random_color(probability=0.5,min_factor=0.3,max_factor=0.8)
-    p.sample(2140)
+    p.sample(Augmentation_1)
 
 def split_image_mask():
     """将增强后的图像和掩码分开"""
@@ -111,12 +111,7 @@ def countColors(img):
 # # img = cv2.merge([img,img,img])
 # # countColors(img)#[[0, 0, 0], [19, 19, 19]]
 
-if __name__ == "__main__":
-    img_path = '../datasets/JPEGImages/'
-    output_path = '../datasets/JPEGImages_png/'
-    jpg_png(img_path=img_path,output_path=output_path)
-    augment_data()
-    split_image_mask()
+
 
 
 

@@ -8,12 +8,6 @@ def convert_image(file,width=512,height=512):
     new_img=resize_image(img,(width,height))
     new_img.save(os.path.join(image_dir,os.path.basename(file)))#os.path.basename(file)返回file最后的文件名
 
-# def convert_mask(file,width=512,height=512):
-#     """将图像尺寸转换成512X512,并保存在另一个文件夹"""
-#     img=Image.open(file)
-#     new_img=resize_image(img,(width,height))
-#     new_img.save(os.path.join(mask_dir,os.path.basename(file)))#os.path.basename(file)返回file最后的文件名
-
 #---------------------------------------------------#
 #   对输入图像进行resize
 """在Image中
@@ -36,15 +30,8 @@ def resize_image(image, size):
 if __name__ == "__main__":
     # 图像尺寸裁剪后的文件夹
     image_dir = '../datasets/image_size512/'
-    # # mask图像尺寸裁剪后的的文件夹
-    # mask_dir = '../datasets/mask_size512/'
     if not os.path.exists(image_dir):
         os.makedirs(image_dir)
-    # if not os.path.exists(mask_dir):
-    #     os.makedirs(mask_dir)
     for file in glob.glob('../datasets/JPEGImages/*.jpg'):  # 来源文件夹
         # print(file)#file代表文件路径
         convert_image(file)  # 目标文件夹
-    # for file in glob.glob('../datasets/SegmentationClassPNG/*.png'):  # 来源文件夹
-    #     # print(file)#file代表文件路径
-    #     convert_mask(file)  # 目标文件夹
