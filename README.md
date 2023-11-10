@@ -3,12 +3,11 @@ This code implementation **simultaneously** applies data augmentation to **image
 ## Introduction
 - Original image
 
-![13](https://github.com/Xue21/DataEnhancement/assets/103324432/c7b3e44d-ab99-49c1-94f3-3c4280ff0149)
+![13](https://github.com/Xue21/CableBendRadius/assets/103324432/edb529c7-22ce-4d63-b85b-402fa0eae1ea)
 - Data augmentation is performed through **rotation**, **flipping**, and **random cropping**.
 
-![14](https://github.com/Xue21/DataEnhancement/assets/103324432/465fdb68-82ce-4b58-ac5b-92cdfa7a9f5b)
+![14](https://github.com/Xue21/CableBendRadius/assets/103324432/bb587d7b-fb35-48d2-a6cd-e7f879e40e1d)
 - Additionally, augmentation is achieved by altering **brightness**, **contrast**, **saturation**, and **hue**. 
 
-![15](https://github.com/Xue21/DataEnhancement/assets/103324432/c701dce7-037f-4f1d-a6f3-d5d2e9a85a6b)
-
+![15](https://github.com/Xue21/CableBendRadius/assets/103324432/ccad439b-245c-4088-9b21-178c23256093)
 
